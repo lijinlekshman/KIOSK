@@ -1,0 +1,73 @@
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import url('../../../styles/variables.scss');
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f1f2f3;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 12.813rem;
+  transition: margin-left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  background: var(--body-bg);
+
+  &.sidebar-collapsed {
+    margin-left: 60px;
+  }
+
+  .dashboard-header.navbar {
+    background: var(--body-bg);
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.content-area {
+  flex: 1;
+  padding: 0;
+  background: var(--body-bg);
+}
+
+.dashboard-header {
+  background-color: var(--body-bg) !important;
+  border-bottom: unset;
+  box-shadow: none;
+  z-index: 1000;
+
+  .sidebar-toggle-btn {
+    border: none;
+    background: transparent;
+    color: #6c757d;
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .navbar-brand {
+    color: #212529;
+    font-size: 1.25rem;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+
+    &.sidebar-collapsed {
+      margin-left: 0;
+    }
+  }
+}

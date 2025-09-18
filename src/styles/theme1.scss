@@ -1,0 +1,31 @@
+// Theme 1 styles - Red sidebar
+.theme-theme1 .sidebar {
+  background-color: #dc3545 !important;
+
+  .sidebar-header {
+    background-color: #c82333;
+    border-bottom: 1px solid #a71e2a;
+  }
+
+  .sidebar-link {
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: #c82333 !important;
+      color: #ffffff !important;
+    }
+
+    &.active {
+      background-color: #ffffff !important;
+      color: #dc3545 !important;
+    }
+  }
+
+  .sidebar-title {
+    color: #ffffff !important;
+  }
+
+  .sidebar-footer {
+    border-top: 1px solid #a71e2a;
+  }
+}

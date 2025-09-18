@@ -1,0 +1,104 @@
+// Default Theme
+[data-theme='default'] {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+
+  --sidebar-bg: #343a40;
+  --sidebar-text: #adb5bd;
+  --sidebar-hover: #495057;
+  --sidebar-active: #007bff;
+
+  --header-bg: #fff;
+  --header-border: #dee2e6;
+
+  --content-bg: #f8f9fa;
+  --text-color: #212529;
+}
+
+// Theme 1 - Blue Theme
+[data-theme='theme1'] {
+  --primary-color: #0d6efd;
+  --secondary-color: #6f42c1;
+  --success-color: #198754;
+  --danger-color: #dc2626;
+  --warning-color: #fd7e14;
+  --info-color: #0dcaf0;
+  --light-color: #f1f3f4;
+  --dark-color: #212529;
+
+  --sidebar-bg: #1e3a8a;
+  --sidebar-text: #93c5fd;
+  --sidebar-hover: #1e40af;
+  --sidebar-active: #3b82f6;
+
+  --header-bg: #ffffff;
+  --header-border: #e5e7eb;
+
+  --content-bg: #f8fafc;
+  --text-color: #1f2937;
+}
+
+// Dark Theme
+[data-theme='dark'] {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #212529;
+  --dark-color: #f8f9fa;
+
+  --sidebar-bg: #1a1a1a;
+  --sidebar-text: #e9ecef;
+  --sidebar-hover: #2d2d2d;
+  --sidebar-active: #0d6efd;
+
+  --header-bg: #2d2d2d;
+  --header-border: #404040;
+
+  --content-bg: #1a1a1a;
+  --text-color: #e9ecef;
+}
+
+// Apply theme variables to components
+.dashboard-layout {
+  background-color: var(--content-bg);
+  color: var(--text-color);
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg) !important;
+  color: var(--sidebar-text) !important;
+
+  .sidebar-link {
+    color: var(--sidebar-text) !important;
+
+    &:hover {
+      background-color: var(--sidebar-hover) !important;
+      color: var(--dark-color) !important;
+    }
+
+    &.active {
+      background-color: var(--sidebar-active) !important;
+      color: var(--light-color) !important;
+    }
+  }
+
+  .sidebar-title {
+    color: var(--sidebar-text) !important;
+  }
+}
+
+.dashboard-header {
+  background-color: var(--body-bg) !important;
+  border-bottom: unset !important;
+  color: var(--text-color) !important;
+  box-shadow: none !important;
+}

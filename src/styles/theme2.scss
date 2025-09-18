@@ -1,0 +1,31 @@
+// Theme 2 styles - Green sidebar
+.theme-theme2 .sidebar {
+  background-color: #28a745 !important;
+
+  .sidebar-header {
+    background-color: #1e7e34;
+    border-bottom: 1px solid #155724;
+  }
+
+  .sidebar-link {
+    color: #ffffff !important;
+
+    &:hover {
+      background-color: #1e7e34 !important;
+      color: #ffffff !important;
+    }
+
+    &.active {
+      background-color: #ffffff !important;
+      color: #28a745 !important;
+    }
+  }
+
+  .sidebar-title {
+    color: #ffffff !important;
+  }
+
+  .sidebar-footer {
+    border-top: 1px solid #155724;
+  }
+}

@@ -1,0 +1,165 @@
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 12.813rem;
+  background-color: #fff;
+  color: #fff;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &.collapsed {
+    width: 60px;
+  }
+}
+
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: unset;
+  text-align: center;
+
+  .sidebar-title {
+    color: #fff;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .sidebar-logo {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.sidebar-item {
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #adb5bd;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background-color: #495057;
+    color: #fff;
+  }
+
+  &.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  &.collapsed {
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.sidebar-icon {
+  font-size: 1.1rem;
+  min-width: 20px;
+  margin-right: var(--fz-10px);
+
+  .collapsed & {
+    margin-right: 0;
+  }
+
+  &.bi {
+    font-size: var(--fz-13px);
+    &.bi-chevron-left {
+      margin-left: var(--fz-10px);
+    }
+  }
+}
+
+.sidebar-label {
+  flex: 1;
+  font-size: var(--fz-14px);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-footer {
+  border-top: 1px solid #495057;
+  padding: 1rem 0;
+
+  .sidebar-link {
+    color: #6c757d;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// Badge styling
+.sidebar-link .badge {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+}
+
+// Nested items
+.sidebar-nav .sidebar-nav {
+  margin-left: 0;
+  padding-left: 0;
+
+  .sidebar-link {
+    padding-left: 2.5rem;
+    font-size: 0.85rem;
+
+    .sidebar-icon {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Scrollbar styling
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #343a40;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border-radius: 2px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.dashboard-card {
+  border-radius: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 0.5rem 1.5rem rgba(80, 80, 120, 0.08);
+}
+
+.bg-success-subtle {
+  background: #e6f4ea !important;
+}
+
+.bg-danger-subtle {
+  background: #fbeaea !important;
+}
+
+.text-purple {
+  color: #7c3aed !important;
+}
+
+canvas {
+  max-height: 450px !important;
+}
+
+.border-radius {
+  border-radius: var(--fz-10px);
+}
+
+// .dashboard-cards {
+//     padding: 0 0 0 1rem;
+// }
+.Anaysis-Widget {
+  padding: 0 0 0 1rem;
+}

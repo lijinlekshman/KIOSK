@@ -1,0 +1,117 @@
+// Default theme styles - Blue sidebar
+.theme-defaulttheme .sidebar {
+  background-color: #fff !important;
+
+  .sidebar-header {
+    background-color: #fff;
+    border-bottom: unset;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+
+    > img {
+      min-width: var(--fz-12px);
+      width: var(--fz-12px);
+    }
+
+    &:hover,
+    &.active {
+      > img {
+        filter: invert(40%) sepia(100%) saturate(2500%) hue-rotate(210deg)
+          brightness(100%) contrast(97%);
+      }
+    }
+  }
+
+  .sidebar-link {
+    color: var(--text-primary) !important;
+    position: relative;
+
+    &:hover {
+      color: var(--text-info) !important;
+      background-color: unset !important;
+    }
+
+    &.active {
+      color: var(--text-info) !important;
+      background: linear-gradient(
+        90.23deg,
+        rgba(32, 123, 255, 0.14) -22.32%,
+        rgba(255, 255, 255, 0) 144.15%
+      );
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: var(--bg-info);
+        width: 3px;
+      }
+    }
+  }
+
+  .sidebar-title {
+    color: #ffffff !important;
+  }
+
+  .sidebar-footer {
+    border-top: 1px solid var(--body-bg);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .sidebar-link {
+      justify-content: center;
+    }
+  }
+}
+
+.card-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+
+  .card {
+    width: calc(100% / 4 - 1rem);
+  }
+}
+
+.mobile-btn {
+  display: none;
+}
+
+@media (max-width: 1680px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 700px) {
+  .mobile-btn {
+    display: block;
+  }
+}
+
+@import url('../styles/main-style.scss');
+
+.theme-defaulttheme {
+  > div {
+    height: 100%;
+  }
+}
